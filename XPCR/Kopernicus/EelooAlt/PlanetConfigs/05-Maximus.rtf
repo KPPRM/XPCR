@@ -1,0 +1,210 @@
+Kopernicus:AFTER[Kopernicus]
+{
+	Body
+    {
+	   name = Maximus
+		
+		Debug
+		{
+			exportMesh = true
+			update = true
+			showSOI = false
+		}
+		cacheFile = XPCR/Kopernicus/EelooAlt/Cache/Maximus.bin	
+	   Template
+        {
+            name = Gilly
+			removeAllPQSMods = false
+        }
+        Properties
+        {
+		     tidallyLocked = false
+			rotates = true
+			radius = 7000
+			displayname = Maximus^N
+		 	geeASL = 0.08
+			initialRotation = 0
+			isHomeWorld = false
+			timewarpAltitudeLimits = 0 500 1000 2500 5000 15000 25000 
+			description = 
+			biomeMap = XPCR/Kopernicus/EelooAlt/PluginData/Maximus.gif
+			
+			ScienceValues
+			{
+				landedDataValue = 15
+				inSpaceLowDataValue = 12
+				inSpaceHighDataValue = 10
+				flyingLowDataValue = 13
+				flyingHighDataValue = 11
+				recoveryValue = 11
+			}
+		}
+		ScaledVersion
+        {
+            Material
+            {
+				texture = XPCR/Kopernicus/EelooAlt/Textures/Maximus_Colour.dds
+				normals = XPCR/Kopernicus/EelooAlt/Textures/Maximus_Normal.dds
+				heights =
+XPCR/Kopernicus/EelooAlt/Textures/Maximus_Height.dds
+
+            }
+        }
+        Orbit
+        {
+		 referenceBody = Eeloo
+		 inclination = 45
+		 eccentricity = 0.00
+            semiMajorAxis = 27580000
+		 color = 
+            longitudeOfAscendingNode = 90
+            argumentOfPeriapsis = 45
+            meanAnomalyAtEpoch = 0
+            epoch = 0
+        }
+        PQS
+        {
+		  fadeStart = 8500
+		  fadeEnd = 17000
+		  deactivateAltitude = 170850
+		  allowFootprints = True
+		  Material
+		  {
+				saturation = 1
+				contrast = 1
+				tintColor = 1,1,1,0
+				groundTexStart = 0
+				groundTexEnd = 9000
+				steepTexStart = 0
+				steepTexEnd = 9000				
+				steepTex = CTTP/Textures/PluginData/sand.dds
+				steepBumpMap = CTTP/Textures/PluginData/sand_normal.dds
+				steepNearTiling = 2500
+				steepTiling = 25
+				lowTex = CTTP/Textures/PluginData/gravel.dds
+				lowBumpMap = CTTP/Textures/PluginData/gravel_normal.dds
+				lowNearTiling = 5000
+				lowMultiFactor = 50
+				lowBumpNearTiling = 5000
+				lowBumpFarTiling = 50
+				midTex = CTTP/Textures/PluginData/sand.dds
+				midBumpMap = CTTP/Textures/PluginData/sand_normal.dds
+				midNearTiling = 5000
+				midMultiFactor = 50
+				midBumpNearTiling = 5000
+				midBumpFarTiling = 50
+				highTex = CTTP/Textures/PluginData/gravel.dds
+				highBumpMap = CTTP/Textures/PluginData/gravel_normal.dds
+				highNearTiling = 5000
+				highMultiFactor = 50
+				highBumpNearTiling = 5000
+				highBumpFarTiling = 50			
+				lowStart = 0
+				lowEnd = 0.7
+				highStart = 0.8
+				highEnd = 1
+		  }
+             Mods
+			{
+				HeightColorMap
+				{
+					blend = 1
+					order = 500
+					enabled = True
+					LandClasses
+					{
+						Class
+						{
+ 	  						name = Base
+							Color =
+							altitudeStart = -1
+							altitudeEnd = 0.6
+							lerpToNext = True
+							delete = False
+						}
+					}
+				}
+				VertexSimplexNoiseColor
+				{
+					blend = 0.3
+					colorStart = 
+					colorEnd = 					
+					frequency = 6
+					octaves = 1
+					persistence = 0.5
+					seed = 777834934
+					order = 501
+					enabled = True
+				}
+				VertexHeightNoise
+				{
+					name = mountains
+					deformity = 150
+					frequency = 3
+					octaves = 12
+					persistence = 1
+					seed = 0
+					noiseType = RidgedMultifractal
+					mode = High
+					lacunarity = 1.25
+					order = 5
+					enabled = True
+				}
+				VoronoiCraters
+				{
+					colorOpacity = 0.9
+					DebugColorMapping = False
+					deformation = 300
+					jitter = 0.1
+					jitterHeight = 3
+					rFactor = 1
+					rOffset = 1
+					simplexFrequency = 1
+					simplexOctaves = 20
+					simplexPersistence = 0.5
+					simplexSeed = 123123
+					voronoiDisplacement = 0.01
+					voronoiFrequency = 3
+					voronoiSeed = 766
+					order = 100
+					enabled = True
+					CraterCurve
+					{
+						key =
+					}
+					JitterCurve
+					{
+						key = 
+					}
+
+				}
+				VoronoiCraters
+				{
+					name = craters2
+					colorOpacity = 0.9
+					DebugColorMapping = False
+					deformation = 200
+					jitter = 0.1
+					jitterHeight = 3
+					rFactor = 1
+					rOffset = 1
+					simplexFrequency = 1
+					simplexOctaves = 20
+					simplexPersistence = 0.5
+					simplexSeed = 11111
+					voronoiDisplacement = 0.01
+					voronoiFrequency = 5
+					voronoiSeed = 22222
+					order = 100
+					enabled = True
+					CraterCurve
+					{
+						key = 
+					}
+					JitterCurve
+					{
+						key = 
+					}
+				}
+                }
+
