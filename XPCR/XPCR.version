@@ -1,13 +1,13 @@
 {
-    "NAME":"OuterPlanetsMod",
-    "URL":"https://raw.githubusercontent.com/Lapislover101/XPCR/master//XPCR.version",
+    "NAME":"XPCR",
+    "URL":"https://raw.githubusercontent.com/Lapislover101/XPCR/master/XPCR.version",
     "DOWNLOAD":"https://github.com/Lapislover101/XPCR/releases",
-    "CHANGE_LOG_URL":"https://raw.githubusercontent.com/Lapislover101/master/README.md",
+    "CHANGE_LOG_URL":"https://raw.githubusercontent.com/Lapislover101/XPCR/master/README.md",
     "VERSION":{
         "MAJOR":1,
         "MINOR":1,
         "PATCH":8,
-        "BUILD":0
+        "BUILD":2
     },
     "KSP_VERSION":{
         "MAJOR":1,
@@ -21,7 +21,7 @@
     },
     "KSP_VERSION_MAX":{
         "MAJOR":1,
-        "MINOR":7,
-        "PATCH":3
+        "MINOR":8,
+        "PATCH":0
     }
 }
